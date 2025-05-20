@@ -1,0 +1,107 @@
+*{
+    margin: 0; padding: 0; box-sizing: border-box; font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+:root{
+    --primary-color: #2b1d0f;
+    --text-color: #fff;
+    --navbar-color: #212121;
+    --button-color: #f44336;
+}
+body{
+    background: var(--primary-color);
+    color: var(--text-color);
+}
+header nav{
+    background: var(--navbar-color);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+header nav h1{
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+header nav form{
+    display: flex;
+    justify-content: center;
+}
+form input[type="text"]{
+    flex-grow: 1;
+    margin-right: 10px;;
+}
+form input[type="text"], button[type="submit"]{
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 4px;;
+}
+button[type="submit"]{
+    background: var(--button-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;;
+}
+button[type="submit"]:hover{
+    background: #ff5c5c;
+}
+/*Main Section*/
+.recipe-container{
+    text-align: center;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    width: 80%;
+    margin: 10px auto;
+    place-items: center;;
+}
+.recipe{
+    background: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    color: black;
+    border-radius: 6px;;
+    box-shadow: 0 5px 10px black;
+    cursor: pointer;;
+    max-width: 350px;
+}
+.recipe img{
+    height: 300px;;
+}
+.recipe h3{
+    font-size: 24px;
+    margin-block: 5px;;
+}
+.recipe p{
+    font-size: 20px;
+    color: #4a4a4a;
+    margin: 5px 0;
+}
+.recipe span{
+    font-weight: 600;
+}
+.recipe button{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    border: none;;
+    border-radius: 5px;
+    cursor: pointer;
+    background: var(--button-color);
+    color: var(--text-color);
+    margin: 18px auto;;
+}
+/* Responsive Code*/
+@media screen and (max-width: 600px){
+    header nav{
+        flex-direction: column;;
+    }
+    header nav form{
+        width: 80%;
+        margin-top: 20px;;
+    }
+}
